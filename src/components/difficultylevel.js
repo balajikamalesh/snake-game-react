@@ -1,6 +1,7 @@
 import React from "react";
 
 export default (props) => {
+  const { handler } = props;
   return (
     <div style={{ marginTop: "40px", textAlign: "center" }}>
       <h1>Difficulty Level</h1>
@@ -9,21 +10,22 @@ export default (props) => {
           <input
             type="radio"
             id="easy"
-            onClick={() => props.handler("easy")}
+            onClick={() => handler("easy")}
             name="difficulty"
           />
           <label htmlFor="easy">Easy</label>
           <input
             type="radio"
             id="medium"
-            onClick={() => props.handler("medium")}
+            onClick={() => handler("medium")}
             name="difficulty"
+            checked
           />
           <label htmlFor="easy">Medium</label>
           <input
             type="radio"
             id="hard"
-            onClick={() => props.handler("hard")}
+            onClick={() => handler("hard")}
             name="difficulty"
           />
           <label htmlFor="easy">
@@ -32,7 +34,7 @@ export default (props) => {
           <input
             type="radio"
             id="pesto"
-            onClick={() => props.handler("pesto")}
+            onClick={() => handler("pesto")}
             name="difficulty"
           />
           <label htmlFor="easy">

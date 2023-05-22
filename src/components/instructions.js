@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-export default (props) => {
+export default () => {
   return (
-    <div style={{marginTop: '40px'}}>
+    <div style={{ marginTop: "40px" }}>
       <h1>Instructions</h1>
       <ol>
         <li>Use arrow keys (TOP, BOTTOM, LEFT, RIGHT) to control the snake</li>
@@ -10,5 +10,5 @@ export default (props) => {
         <li>To restart game, select difficulty level and click on 'Reset'</li>
       </ol>
     </div>
-  )
-}
+  );
+};

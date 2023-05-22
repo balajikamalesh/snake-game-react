@@ -1,19 +1,22 @@
-import React from 'react';
+import React from "react";
 
 export default (props) => {
+  const { dot, isNear } = props;
 
   const style = {
-    top: `${props.dot[0]}%`,
-    left: `${props.dot[1]}%`
-  }  
+    top: `${dot[0]}%`,
+    left: `${dot[1]}%`,
+  };
 
-  if(props.isNear){
+  if (isNear) {
     return (
-      <div className="snake-bait" style={style} data-tooltip="AGHHH!!! DON'T EAT ME!!!"></div>
-    )
+      <div
+        className="snake-bait"
+        style={style}
+        data-tooltip="AGHHH!!! DON'T EAT ME!!!"
+      ></div>
+    );
   } else {
-    return (
-      <div className="snake-bait-far" style={style}></div>
-    )
+    return <div className="snake-bait-far" style={style}></div>;
   }
-}
+};
